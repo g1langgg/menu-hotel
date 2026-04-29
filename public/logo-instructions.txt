@@ -1,0 +1,27 @@
+CARA MENGGANTI LOGO AMANOUBA:
+
+1. Siapkan file logo Amanuba (format: PNG, JPG, atau SVG)
+2. Upload logo ke folder: public/images/
+3. Rename file logo menjadi: amanuba-logo.png
+4. Update kode di welcome.blade.php line 411-416:
+
+GANTI:
+<div class="w-32 h-32 mx-auto mb-4 bg-white/10 rounded-2xl flex items-center justify-center backdrop-blur-sm border border-white/20">
+    <div class="text-center">
+        <i class="fas fa-spa text-5xl text-bali-orange mb-2"></i>
+        <p class="text-white font-bold text-lg">AMANOUBA</p>
+    </div>
+</div>
+
+MENJADI:
+<img src="{{ asset('images/amanuba-logo.png') }}" 
+     alt="Amanuba Logo" 
+     class="h-32 mx-auto mb-4 object-contain">
+
+5. Refresh browser untuk melihat perubahan
+
+LOGO REQUIREMENTS:
+- Ukuran optimal: 200x200px atau 300x300px
+- Background transparan (PNG) lebih disarankan
+- Format: PNG, JPG, atau SVG
+- File size: < 500KB
